@@ -1,0 +1,7 @@
+#!/bin/bash
+kill `cat pid_nginx.pid`
+cd nginx-src
+make
+cp objs/nginx ../
+cd ../
+./nginx

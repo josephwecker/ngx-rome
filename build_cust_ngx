@@ -1,0 +1,6 @@
+#!/bin/bash
+cd nginx-src
+make clean
+./configure --prefix='.' --conf-path='nginx.conf' --add-module='../ngx-http-rome-module'
+make
+cp objs/nginx ../
