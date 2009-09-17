@@ -1,9 +1,6 @@
  NGX-Rome
 ==========
 
-@author: Joseph Wecker <joseph.wecker@gmail.com>
-@copyright: 2009 Joseph Wecker, All Rights Reserved
-
 Summary
 -------
 
