@@ -1,8 +1,8 @@
- NGX-Rome
-==========
+NGX-Rome
+--------
 
 Summary
--------
+~~~~~~~
 
 This is a module for nginx that allows for the delivering of partitioned files.
 Rome refers to the Roman empire's occasional strategy of "Divide and Conquer."
