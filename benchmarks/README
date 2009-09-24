@@ -1,0 +1,38 @@
+Server Configurations
+----------------------
+(server-1) Apache + PHP
+(server-2) Nginx + fastcgi + PHP
+(server-3) Nginx + SSI + fastcgi + PHP
+(server-4) Nginx + SSI + misultin + sgte
+(server-5) Nginx + rome + misultin + sgte (no build optimizations)
+(server-5) Nginx + rome + misultin + sgte + zml-build-optimizations
+(server-6) Nginx + rome + misultin + sgte + zml-build-optimizations + ramdisk
+(server-7) Nginx + rome + misultin + sgte + zml-build-optimizations + ramdisk + memcached
+
+Base Pages
+-----------
+- login.html
+- js/script1.js           70k
+- js/script2.js           47k
+- js/script3.js          500k
+- images/image1.png      184k
+- images/image2.png        4k
+- images/image3.jpg        2k
+- images/image4.jpg      572k
+- styles/css1.css         21k
+- styles/css2.css          4k
+- welcome1.html
+- styles/css1.css         21k
+- styles/css2.css          4k
+- js/script4.js          404k
+- js/script5.js           65k
+- js/script6.js           37k
+- images/image6.png       16k
+- images/image7.png        4k
+- images/image8.png        4k
+- images/image9.png        6k
+- images/image10.png       3k
+- welcom2.html
+- {same aux stuff as welcome 1, but different dynamic stuff}
+
+

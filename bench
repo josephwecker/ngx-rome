@@ -1,2 +1,0 @@
-#!/bin/bash
-ab -k -n 10000 -c 10 -g results.plot http://localhost:8088/out.html
