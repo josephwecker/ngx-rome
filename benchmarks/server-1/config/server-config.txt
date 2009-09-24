@@ -1,0 +1,10 @@
+Server:
+	Fresh slicehost (min. plan) ubuntu 9.04, updated & upgraded as of 24 Sept 2009
+	The following installed:
+		- language-pack-en & dependencies
+		- apache2 & dependencies
+		- php5 & dependencies
+	Serving straight from an IP address which is accessing from /var/www
+		(i.e., no virtual hosts, conf, etc. other than turning on php5)
+	Siege is run from a slicehost that's on the same subnet but using the public IP
+		address of the server.
