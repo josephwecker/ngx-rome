@@ -1,3 +1,4 @@
+# First screen - simulate a home page w/ login area
 http://amnesia/login.php
 http://amnesia/js/script1.js
 http://amnesia/js/script2.js
@@ -8,7 +9,7 @@ http://amnesia/images/image3.jpg
 http://amnesia/images/image4.jpg
 http://amnesia/styles/css1.css
 http://amnesia/styles/css2.css
-
+# First page after log in
 http://amnesia/welcome1.php POST username=siege&password=blank
 http://amnesia/styles/css1.css
 http://amnesia/styles/css2.css
@@ -20,7 +21,7 @@ http://amnesia/images/image7.png
 http://amnesia/images/image8.png
 http://amnesia/images/image9.png
 http://amnesia/images/image10.png
-
+# Second page after log in
 http://amnesia/welcome2.php
 http://amnesia/styles/css1.css
 http://amnesia/styles/css2.css
