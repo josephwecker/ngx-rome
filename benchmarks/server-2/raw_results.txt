@@ -1,95 +1,95 @@
 ==== Run 1 ====
 command: siege -c 5 -b -r 3200
-uptime: 17:28:43 up 160 days, 22:45, 2 users, load average: 0.02, 0.03, 0.00
+uptime: 21:54:07 up 161 days, 3:11, 1 user, load average: 0.00, 0.00, 0.00
 ** SIEGE 2.66
 ** Preparing 5 concurrent users for battle.
 The server is now under siege...      done.
 Transactions:		       16000 hits
 Availability:		      100.00 %
-Elapsed time:		      964.07 secs
-Data transferred:	     1233.86 MB
-Response time:		        0.30 secs
-Transaction rate:	       16.60 trans/sec
+Elapsed time:		      437.49 secs
+Data transferred:	      560.49 MB
+Response time:		        0.14 secs
+Transaction rate:	       36.57 trans/sec
 Throughput:		        1.28 MB/sec
-Concurrency:		        4.99
+Concurrency:		        5.00
 Successful transactions:       16000
 Failed transactions:	           0
-Longest transaction:	        2.18
+Longest transaction:	        1.88
 Shortest transaction:	        0.00
  
 
-real	16m4.083s
-user	0m0.540s
-sys	0m1.744s
+real	7m17.509s
+user	0m0.968s
+sys	0m2.724s
 
 ==== Run 2 ====
 command: siege -c 10 -b -r 1600
-uptime: 17:44:47 up 160 days, 23:01, 2 users, load average: 0.00, 0.00, 0.00
+uptime: 22:01:24 up 161 days, 3:18, 2 users, load average: 0.17, 0.09, 0.02
 ** SIEGE 2.66
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...      done.
 Transactions:		       16000 hits
 Availability:		      100.00 %
-Elapsed time:		      989.94 secs
-Data transferred:	     1233.86 MB
-Response time:		        0.62 secs
-Transaction rate:	       16.16 trans/sec
-Throughput:		        1.25 MB/sec
+Elapsed time:		      451.91 secs
+Data transferred:	      560.49 MB
+Response time:		        0.28 secs
+Transaction rate:	       35.41 trans/sec
+Throughput:		        1.24 MB/sec
 Concurrency:		        9.99
 Successful transactions:       16000
 Failed transactions:	           0
-Longest transaction:	        4.52
+Longest transaction:	        4.03
 Shortest transaction:	        0.00
  
 
-real	16m29.976s
-user	0m0.800s
-sys	0m2.624s
+real	7m31.918s
+user	0m0.776s
+sys	0m2.128s
 
 ==== Run 3 ====
 command: siege -c 20 -b -r 800
-uptime: 18:01:17 up 160 days, 23:18, 2 users, load average: 0.00, 0.03, 0.02
+uptime: 22:08:56 up 161 days, 3:26, 2 users, load average: 0.15, 0.11, 0.05
 ** SIEGE 2.66
 ** Preparing 20 concurrent users for battle.
 The server is now under siege...      done.
 Transactions:		       16000 hits
 Availability:		      100.00 %
-Elapsed time:		      997.85 secs
-Data transferred:	     1233.86 MB
-Response time:		        1.25 secs
-Transaction rate:	       16.03 trans/sec
-Throughput:		        1.24 MB/sec
-Concurrency:		       19.99
+Elapsed time:		      449.84 secs
+Data transferred:	      560.49 MB
+Response time:		        0.56 secs
+Transaction rate:	       35.57 trans/sec
+Throughput:		        1.25 MB/sec
+Concurrency:		       19.98
 Successful transactions:       16000
 Failed transactions:	           0
-Longest transaction:	        8.98
-Shortest transaction:	        0.02
+Longest transaction:	        8.02
+Shortest transaction:	        0.00
  
 
-real	16m37.885s
-user	0m0.808s
-sys	0m2.472s
+real	7m29.858s
+user	0m1.232s
+sys	0m3.664s
 
 ==== Run 4 ====
 command: siege -c 100 -b -r 320
-uptime: 18:17:55 up 160 days, 23:35, 2 users, load average: 0.04, 0.07, 0.02
+uptime: 22:16:26 up 161 days, 3:33, 2 users, load average: 0.03, 0.09, 0.08
 ** SIEGE 2.66
 ** Preparing 100 concurrent users for battle.
 The server is now under siege...      done.
 Transactions:		       32000 hits
 Availability:		      100.00 %
-Elapsed time:		     1968.20 secs
-Data transferred:	     2467.72 MB
-Response time:		        6.13 secs
-Transaction rate:	       16.26 trans/sec
-Throughput:		        1.25 MB/sec
-Concurrency:		       99.64
+Elapsed time:		     1015.19 secs
+Data transferred:	     1120.99 MB
+Response time:		        3.16 secs
+Transaction rate:	       31.52 trans/sec
+Throughput:		        1.10 MB/sec
+Concurrency:		       99.63
 Successful transactions:       32000
 Failed transactions:	           0
-Longest transaction:	       80.88
+Longest transaction:	       52.35
 Shortest transaction:	        0.00
  
 
-real	32m48.208s
-user	0m1.896s
-sys	0m5.520s
+real	16m55.214s
+user	0m1.888s
+sys	0m5.692s
