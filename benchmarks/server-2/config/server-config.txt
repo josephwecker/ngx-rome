@@ -1,0 +1,26 @@
+Server:
+	Fresh slicehost (min. plan) ubuntu 9.04, updated & upgraded as of 24 Sept 2009
+	The following installed:
+		- language-pack-en & dependencies
+		- php5 & dependencies
+		- php5-cgi & dependencies
+		- lighttpd & dependencies, though lighttpd is not running- use it for spawn-fcgi
+	Serving straight from an IP address which is accessing from /var/www
+	Siege is run from a slicehost that's on the same subnet but using the public IP
+		address of the server.
+	
+	Nginx with /etc/nginx/sites-available/default modified as:
+	> Change main location root from /var/www/nginx-default/ to /var/www/
+	> Uncomment / adjust the following chunk in /etc/nginx/sites-available/default
+		location ~ \.php$ {
+			fastcgi_pass   127.0.0.1:9000;
+			fastcgi_index  index.php;
+			fastcgi_param  SCRIPT_FILENAME  /var/www/$fastcgi_script_name;
+			include fastcgi_params;
+		}
+
+	> Comment out the location /images section in /etc/nginx/sites-available/default
+
+	Spawn-fcgi initiated with:
+	/usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid
+
