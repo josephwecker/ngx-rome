@@ -21,6 +21,16 @@ Server:
 
 	> Comment out the location /images section in /etc/nginx/sites-available/default
 
+	> The following gzip section in /etc/nginx/nginx.conf
+	    gzip  on;
+	    gzip_http_version 1.0;
+	    gzip_vary on;
+	    gzip_comp_level 6;
+	    gzip_proxied any;
+	    gzip_types text/plain text/html text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+	    proxy_set_header Accept-Encoding "";
+	    gzip_buffers 16 8k;
+
 	Spawn-fcgi initiated with:
 	/usr/bin/spawn-fcgi -a 127.0.0.1 -p 9000 -u www-data -g www-data -f /usr/bin/php5-cgi -P /var/run/fastcgi-php.pid
 
