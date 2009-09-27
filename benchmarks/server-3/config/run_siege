@@ -1,0 +1,24 @@
+#!/bin/bash
+echo '==== Run 1 ====' > raw_results.txt
+echo 'command: siege -c 5 -b -r 3300' >> raw_results.txt
+echo 'uptime:' `uptime` >> raw_results.txt
+{ time siege -R siegerc -c 5 -b -r 3300 -f ./urls.txt ; } 2>> raw_results.txt
+
+echo '' >> raw_results.txt
+echo '==== Run 2 ====' >> raw_results.txt
+echo 'command: siege -c 10 -b -r 1650' >> raw_results.txt
+echo 'uptime:' `uptime` >> raw_results.txt
+{ time siege -R siegerc -c 10 -b -r 1650 -f ./urls.txt ; } 2>> raw_results.txt
+
+echo '' >> raw_results.txt
+echo '==== Run 3 ====' >> raw_results.txt
+echo 'command: siege -c 20 -b -r 825' >> raw_results.txt
+echo 'uptime:' `uptime` >> raw_results.txt
+{ time siege -R siegerc -c 20 -b -r 825 -f ./urls.txt ; } 2>> raw_results.txt
+
+echo '' >> raw_results.txt
+echo '==== Run 4 ====' >> raw_results.txt
+echo 'command: siege -c 100 -b -r 330' >> raw_results.txt
+echo 'uptime:' `uptime` >> raw_results.txt
+{ time siege -R siegerc -c 100 -b -r 330 -f ./urls.txt ; } 2>> raw_results.txt
+

@@ -1,0 +1,95 @@
+==== Run 1 ====
+command: siege -c 5 -b -r 3300
+uptime: 00:41:29 up 161 days, 5:58, 2 users, load average: 0.00, 0.00, 0.00
+** SIEGE 2.66
+** Preparing 5 concurrent users for battle.
+The server is now under siege...      done.
+Transactions:		       15985 hits
+Availability:		       96.88 %
+Elapsed time:		      443.47 secs
+Data transferred:	      577.07 MB
+Response time:		        0.14 secs
+Transaction rate:	       36.05 trans/sec
+Throughput:		        1.30 MB/sec
+Concurrency:		        4.91
+Successful transactions:       16500
+Failed transactions:	         515
+Longest transaction:	        1.86
+Shortest transaction:	        0.00
+ 
+
+real	7m23.497s
+user	0m0.748s
+sys	0m2.312s
+
+==== Run 2 ====
+command: siege -c 10 -b -r 1650
+uptime: 00:48:53 up 161 days, 6:06, 2 users, load average: 0.02, 0.04, 0.00
+** SIEGE 2.66
+** Preparing 10 concurrent users for battle.
+The server is now under siege...      done.
+Transactions:		       15980 hits
+Availability:		       96.85 %
+Elapsed time:		      479.88 secs
+Data transferred:	      580.68 MB
+Response time:		        0.29 secs
+Transaction rate:	       33.30 trans/sec
+Throughput:		        1.21 MB/sec
+Concurrency:		        9.79
+Successful transactions:       16500
+Failed transactions:	         520
+Longest transaction:	        4.23
+Shortest transaction:	        0.01
+ 
+
+real	7m59.903s
+user	0m0.904s
+sys	0m2.624s
+
+==== Run 3 ====
+command: siege -c 20 -b -r 825
+uptime: 00:56:52 up 161 days, 6:14, 2 users, load average: 0.01, 0.03, 0.00
+** SIEGE 2.66
+** Preparing 20 concurrent users for battle.
+The server is now under siege...      done.
+Transactions:		       15980 hits
+Availability:		       96.85 %
+Elapsed time:		      500.80 secs
+Data transferred:	      581.00 MB
+Response time:		        0.62 secs
+Transaction rate:	       31.91 trans/sec
+Throughput:		        1.16 MB/sec
+Concurrency:		       19.68
+Successful transactions:       16500
+Failed transactions:	         520
+Longest transaction:	        8.82
+Shortest transaction:	        0.01
+ 
+
+real	8m20.821s
+user	0m1.212s
+sys	0m3.608s
+
+==== Run 4 ====
+command: siege -c 100 -b -r 330
+uptime: 01:05:13 up 161 days, 6:22, 2 users, load average: 0.01, 0.11, 0.07
+** SIEGE 2.66
+** Preparing 100 concurrent users for battle.
+The server is now under siege...      done.
+Transactions:		       32000 hits
+Availability:		       96.97 %
+Elapsed time:		      998.51 secs
+Data transferred:	     1204.84 MB
+Response time:		        3.01 secs
+Transaction rate:	       32.05 trans/sec
+Throughput:		        1.21 MB/sec
+Concurrency:		       96.59
+Successful transactions:       33000
+Failed transactions:	        1000
+Longest transaction:	       53.75
+Shortest transaction:	        0.01
+ 
+
+real	16m38.529s
+user	0m1.784s
+sys	0m5.392s
