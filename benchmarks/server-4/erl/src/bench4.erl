@@ -28,19 +28,29 @@ handle(["login"], Req) ->
 	Req:ok([{"Set-Cookie", "sid=" ++ NewSessID}], "~s is awesome", [new_uuid()]);
 
 handle(["name"], Req) ->
-	Headers = Req:get(headers),
-	{value, {_, Cookies}} = lists:keysearch('Cookie', 1, Headers),
-	Req:ok([], "~p", [Cookies]);
-	%[_,_,_,_|SID] = Cookies,
-	%Req:ok([], "~p", [SID]);
-	%Req:ok([], "~p", [Headers]);
-	%[SessionDict] = ets:lookup(sessions, 
+	SessionDict = get_session(Req),
+	{ok, Name} = dict:find(name, SessionDict),
+	Req:ok([], "~s", [Name]);
 
 handle(_, Req) ->
 	Req:ok("page not found").
 
 
 %---------------------------- 
+get_session(Req) ->
+	Headers = Req:get(headers),
+	Cookies = get_cookies(Headers),
+	{value, {_, SID}} = lists:keysearch("sid", 1, Cookies),
+	[{_, SessionDict}] = ets:lookup(sessions, SID),
+	SessionDict.
+
+
+get_cookies(Headers) ->
+	case lists:keysearch('Cookie', 1, Headers) of
+	{value, {_, Cookies}} ->
+		mochiweb_cookies:parse_cookie(Cookies);
+	_ -> []
+	end.
 
 
 
