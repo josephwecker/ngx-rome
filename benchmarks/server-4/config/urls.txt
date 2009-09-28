@@ -10,7 +10,7 @@ http://amnesia/images/image4.jpg
 http://amnesia/styles/css1.css
 http://amnesia/styles/css2.css
 # First page after log in (redirects to welcome1.html after setting session)
-http://amnesia/begin.php POST username=siege&password=blank
+http://amnesia/.misultin/begin POST username=siege&password=blank
 http://amnesia/styles/css1.css
 http://amnesia/styles/css2.css
 http://amnesia/js/script4.js

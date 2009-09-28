@@ -1,0 +1,81 @@
+# You may add here your
+# server {
+#	...
+# }
+# statements for each of your virtual hosts
+
+server {
+	listen   80;
+	server_name  localhost;
+
+	access_log  /var/log/nginx/localhost.access.log;
+
+	location / {
+		ssi    on;
+		root   /var/www/;
+		index  index.html index.htm;
+	}
+
+	
+	location /.misultin/ {
+		proxy_pass	http://localhost:8080;
+	}
+	#error_page  404  /404.html;
+
+	# redirect server error pages to the static page /50x.html
+	#
+	error_page   500 502 503 504  /50x.html;
+	location = /50x.html {
+		root   /var/www/nginx-default;
+	}
+
+	# proxy the PHP scripts to Apache listening on 127.0.0.1:80
+	#
+	#location ~ \.php$ {
+		#proxy_pass   http://127.0.0.1;
+	#}
+
+	# deny access to .htaccess files, if Apache's document root
+	# concurs with nginx's one
+	#
+	#location ~ /\.ht {
+		#deny  all;
+	#}
+}
+
+
+# another virtual host using mix of IP-, name-, and port-based configuration
+#
+#server {
+#listen   8000;
+#listen   somename:8080;
+#server_name  somename  alias  another.alias;
+
+#location / {
+#root   html;
+#index  index.html index.htm;
+#}
+#}
+
+
+# HTTPS server
+#
+#server {
+#listen   443;
+#server_name  localhost;
+
+#ssl  on;
+#ssl_certificate  cert.pem;
+#ssl_certificate_key  cert.key;
+
+#ssl_session_timeout  5m;
+
+#ssl_protocols  SSLv2 SSLv3 TLSv1;
+#ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+#ssl_prefer_server_ciphers   on;
+
+#location / {
+#root   html;
+#index  index.html index.htm;
+#}
+#}
